@@ -1,0 +1,2 @@
+module MustauthHelper
+end
