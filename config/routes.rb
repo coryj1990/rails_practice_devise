@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'mustauth/index' => 'mustauth#index'
   get 'noauth/index' => 'noauth#index'
 
-  devise_for :users
+ devise_for :users do
+  get '/users/sign_out' => 'devise/sessions#destroy'
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
